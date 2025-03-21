@@ -28,6 +28,11 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'OK', message: 'Omuto AI Hub API is running' });
 });
 
+// Root route
+app.get('/', (req, res) => {
+  res.send('🎉 Omuto AI Hub Backend is Running!');
+});
+
 // Start server
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
